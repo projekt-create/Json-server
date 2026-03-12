@@ -1,19 +1,21 @@
+import { Link, NavLink } from 'react-router-dom';
+
 const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          <div className="flex-shrink-0 flex items-center cursor-pointer group">
+          <Link to="/" className="flex-shrink-0 flex items-center cursor-pointer group">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300 shadow-lg">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
             </div>
             <span className="ml-3 text-2xl font-black text-slate-900 dark:text-white tracking-tight">Tech<span className="text-indigo-500">Store</span></span>
-          </div>
+          </Link>
           <div className="hidden md:flex space-x-8">
-            <a href="#" className="flex items-center text-slate-600 hover:text-indigo-500 dark:text-slate-300 dark:hover:text-indigo-400 font-medium transition-colors">Home</a>
-            <a href="#shop" className="flex items-center text-slate-600 hover:text-indigo-500 dark:text-slate-300 dark:hover:text-indigo-400 font-medium transition-colors">Shop</a>
-            <a href="#about" className="flex items-center text-slate-600 hover:text-indigo-500 dark:text-slate-300 dark:hover:text-indigo-400 font-medium transition-colors">About Us</a>
-            <a href="#contact" className="flex items-center text-slate-600 hover:text-indigo-500 dark:text-slate-300 dark:hover:text-indigo-400 font-medium transition-colors">Contact</a>
+            <NavLink to="/" className={({ isActive }) => `flex items-center font-medium transition-colors ${isActive ? 'text-indigo-500' : 'text-slate-600 hover:text-indigo-500 dark:text-slate-300 dark:hover:text-indigo-400'}`}>Home</NavLink>
+            <NavLink to="/shop" className={({ isActive }) => `flex items-center font-medium transition-colors ${isActive ? 'text-indigo-500' : 'text-slate-600 hover:text-indigo-500 dark:text-slate-300 dark:hover:text-indigo-400'}`}>Shop</NavLink>
+            <NavLink to="/about" className={({ isActive }) => `flex items-center font-medium transition-colors ${isActive ? 'text-indigo-500' : 'text-slate-600 hover:text-indigo-500 dark:text-slate-300 dark:hover:text-indigo-400'}`}>About Us</NavLink>
+            <NavLink to="/contact" className={({ isActive }) => `flex items-center font-medium transition-colors ${isActive ? 'text-indigo-500' : 'text-slate-600 hover:text-indigo-500 dark:text-slate-300 dark:hover:text-indigo-400'}`}>Contact</NavLink>
           </div>
           <div className="flex items-center">
             <button className="relative p-2 text-slate-600 hover:text-indigo-500 dark:text-slate-300 transition-colors">

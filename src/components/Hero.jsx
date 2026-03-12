@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-white dark:bg-slate-900 pt-16 pb-32">
@@ -17,9 +19,9 @@ const Hero = () => {
           Discover the latest and most premium tech gadgets, curated specially for modern creators and professionals.
         </p>
         <div className="flex justify-center gap-4">
-          <a href="#shop" className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-xl hover:shadow-indigo-500/25">
+          <Link to="/shop" className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-xl hover:shadow-indigo-500/25">
             Start Shopping
-          </a>
+          </Link>
           <button className="bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 dark:hover:bg-slate-700 hover:scale-105 transition-all duration-300 shadow-sm">
             View Offers
           </button>
